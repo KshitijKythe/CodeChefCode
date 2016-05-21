@@ -1,2 +1,33 @@
 //Source code to the Muffins3 problem (a.k.a Packaging Cupcakes)
 
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.io.BufferedReader;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		int t=0;
+		try{
+			t=Integer.parseInt(br.readLine());
+		}catch(Exception e){}
+		
+		for(int i=0;i<t;i++){
+			int n=0;
+			try{
+				n=Integer.parseInt(br.readLine());
+			}catch(Exception e){}
+			int pack=(int)Math.ceil((n+1)/2.0);
+			System.out.println(pack);
+		}
+		try{
+			br.close();
+		}catch(Exception e){}
+	}
+}
