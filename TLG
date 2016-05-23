@@ -1,0 +1,49 @@
+//java source code for CodeChef problem TLG (a.k.a The lead Game)
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.util.Scanner;
+ 
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		//Scanner sc=new Scanner(System.in);
+		//PrintWriter out=new PrintWriter(System.out);
+		int t=0;
+		try{
+			 t=Integer.parseInt(br.readLine());
+		}catch(Exception e){}
+		int max=0;
+		int win=-1;
+		int scoreA=0;
+		int scoreB=0;
+		for(int i=0;i<t;i++){
+			String scores[]=null;
+			try{
+				scores=br.readLine().split(" ");
+			}catch(Exception e){}
+			scoreA+=Integer.parseInt(scores[0]);
+			scoreB+=Integer.parseInt(scores[1]);
+			int lead=scoreA-scoreB;
+			if(lead<0)
+				lead=-lead;
+			if(lead>max||max==0){
+				max=lead;
+				if(scoreA>scoreB)
+					win=1;
+				else 
+					win=2;
+			}
+		}
+		
+		System.out.print(win+" "+max);
+		//sc.close();
+		br.close();
+	}
+} 
