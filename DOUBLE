@@ -1,4 +1,4 @@
-//java source code for CodeChef problem DOUBLE
+//C source code for CodeChef problem DOUBLE
 
 #include<stdio.h>
 main(){
