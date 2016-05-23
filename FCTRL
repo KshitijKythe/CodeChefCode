@@ -1,0 +1,28 @@
+//java source code for CodeChef problem FCTRL
+
+import java.util.Scanner;
+ 
+class FactorialFiver {
+ 
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int j=1;j<=t;j++){
+			int n=sc.nextInt();
+			int sum=0;
+			int i=1;
+			while(true){
+				int fiver=(int) Math.pow(5, i);
+				int x=n/fiver;
+				if(x<1)
+					break;
+				sum+=x;
+				i++;
+			}
+			System.out.println(sum);
+		}
+		sc.close();
+	}
+ 
+}
+ 
