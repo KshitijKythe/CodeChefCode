@@ -1,4 +1,4 @@
-//currently solving for Sums in a triangle
+//java source code for CodeChef problem SUMTRIAN (a.k.a. Sums in a Triangle)
 /* package whatever; // don't place package name! */
 
 import java.util.*;
