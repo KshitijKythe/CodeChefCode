@@ -21,6 +21,7 @@ class Ideone
 		for(int i=0;i<testCase;i++){
 			try{
 				rows=Integer.parseInt(br.readLine());
+			//	System.out.println(rows);
 			}catch(Exception e){}
 			
 			triangle=new int[rows][rows];
@@ -33,11 +34,27 @@ class Ideone
 				}
 			}
 			
+		
+			for(int z=rows-2;z>=0;z--){
+				for(int j=0;j<=z;j++){
+					int sum1=triangle[z][j]+triangle[z+1][j];
+					int sum2=triangle[z][j]+triangle[z+1][j+1];
+					if(sum1>=sum2)
+						triangle[z][j]=sum1;
+					else
+						triangle[z][j]=sum2;
+				}
+			}
+			
 			/*for(int j=0;j<rows;j++){
 				for(int k=0;k<=j;k++)
-					System.out.print(triangle[j][k]);
-				System.out.println();*/
-			}
+					System.out.print(triangle[j][k]+" ");
+				System.out.println();
+			}*/
+			
+			System.out.println(triangle[0][0]);
+			
+			
 		}
 		
 		try{
