@@ -1,0 +1,47 @@
+//Java source code for problem Holes at Codechef
+
+import java.io.*;
+class CodeChefBegin{
+  public static void main(String [] args){
+    int testcase=0,count=0;
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    String t="",lines[]=new String[40];
+    try{
+    
+    t=br.readLine();
+    }catch(Exception e){}
+    testcase=Integer.parseInt(t);
+    System.out.println();
+    //got the no. of testcases
+    
+    for(int i=0;i<testcase;i++){
+      try{
+        lines[i]=br.readLine();
+      }catch(Exception e){}
+      //System.out.println("Line "+(i+1)+"="+lines[i]);
+    }
+    for(int i=0;i<testcase;i++){
+      count=0;
+      for(int j=0;j<lines[i].length();j++){
+        switch(lines[i].charAt(j)){
+          case 'A':
+          case 'R':
+          case 'D':           
+          case 'O':
+          case 'P':
+          case 'Q':
+            count++;
+            break;
+          case 'B':
+            count+=2;
+            break;
+            
+         
+        }
+       }
+      System.out.print(count+" ");
+    }
+    System.out.println();
+  }
+} 
+Comments 
