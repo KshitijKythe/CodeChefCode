@@ -1,0 +1,47 @@
+//currently solving for Sums in a triangle
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.io.BufferedReader;
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int triangle[][]=null;
+		int rows=0;
+		int testCase=0;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		try{
+			testCase=Integer.parseInt(br.readLine());
+		}catch(Exception e){}
+		
+		for(int i=0;i<testCase;i++){
+			try{
+				rows=Integer.parseInt(br.readLine());
+			}catch(Exception e){}
+			
+			triangle=new int[rows][rows];
+			for(int j=0;j<rows;j++){
+				String scores[]=br.readLine().split(" ");
+				for(int k=0;k<=j;k++){
+					try{
+						triangle[j][k]=Integer.parseInt(scores[k]);
+					}catch(Exception e){}
+				}
+			}
+			
+			/*for(int j=0;j<rows;j++){
+				for(int k=0;k<=j;k++)
+					System.out.print(triangle[j][k]);
+				System.out.println();*/
+			}
+		}
+		
+		try{
+			br.close();
+		}catch(Exception e){}
+	}
+}
