@@ -1,0 +1,34 @@
+// java source code for CodeChef problem PERMUT2 (a.k.a. Ambiguous Permutations)
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Arrays;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int arrA[]=null;
+		int arrB[]=null;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		while(true){
+			int n=Integer.parseInt(br.readLine());
+			if(n==0)
+				break;
+			String scores[]=br.readLine().split(" ");
+			arrA=new int[n];
+			arrB=new int[n];
+			for(int i=0;i<n;i++){
+				arrA[i]=Integer.parseInt(scores[i]);
+				arrB[arrA[i]-1]=i+1;
+			}
+			
+			if(Arrays.equals(arrA,arrB))
+				System.out.println("ambiguous");
+			else
+				System.out.println("not ambiguous");
+		}
+	}
+}
