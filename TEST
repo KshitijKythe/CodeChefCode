@@ -1,0 +1,13 @@
+//C source code for CodeChef problem TEST
+
+#include<stdio.h>
+main(){
+   	int i;
+	i=scanf("%d",&i);
+	while(i!=42){
+		printf("%d\n",i);
+                scanf("%d",&i);	
+	
+	}
+        return 0;
+} 
